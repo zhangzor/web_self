@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签</title>
+</head>
+<body>
+    <h1 align="center">牢记标签</h1>
+    <p align="center"><i><b><u>段落标签</u></b></i></p>  
+    <table border="1" cellspacing="0" bordercolor="blue" width="500" height="250" align="center"> 
+        <caption style="color: aqua">表格外的标题</caption>
+        <thead>
+        <tr>
+            <th>标题</th>
+            <th>标题</th>
+            <th>标题</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>内容</td>
+            <td>内容</td>
+            <td rowspan="2">跨行合并单元格</td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td>内容</td>
+        </tr>
+        <tr>
+            <td colspan="3">跨列合并单元格</td>
+        </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li>这是无序列表</li>
+        <li>这是无序列表</li>
+        <li>这是无序列表</li>
+    </ul>
+    <ol>
+        <li>这是有序列表</li>
+        <li>这是有序列表</li>
+        <li>这是有序列表</li>
+    </ol>
+    <dl>
+        <dt>自定义列表的标题</dt>
+        <dd>--自定义列表</dd>
+        <dt>自定义列表的标题</dt>
+        <dd>--自定义列表</dd>
+    </dl>
+    <img src="tian.jpg" alt="山田孝之" text-align="center" width="200"> <br />
+    <form action="" align="left"  width="500" height="600">
+    <!-- <input type="text" id="name" placeholder="输入用户名"> <br /> -->
+    用户名：<input type="text" value="请输入用户名" onfocus="if(value=='请输入用户名')value=''" onblur="if(!value)value='请输入用户名'" id="name" > <br />
+    <!-- <input type="password" id="pwd" placeholder="输入密码"> <br /> -->
+    密　码：<input type="password" value="请输入密码" onfocus="if(value=='请输入密码')value=''" onblur="if(!value)value='请输入密码'" id="pwd" > <br />
+    <!-- <input type="button" value="登录"> <br /> -->
+    性　别：<input type="radio" name="sex" value="男">男  <input type="radio" name="sex" value="女">女 <br />
+    标　签：<input type="checkbox" name="hobby" value="爬山">爬山 <input type="checkbox" name="hobby" value="游泳">游泳 <input type="checkbox" name="hobby" value="跑步">跑步 <input type="checkbox" name="hobby" value="游戏">游戏 <br />
+    <input type="button" value="注册"> <input type="reset" value="重置">
+    </form>
+</body>
+</html>
