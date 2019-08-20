@@ -56,6 +56,381 @@ a {text-decoration:none;}
 改变字体大小：
 p {text-indent:50px;}
 
+字体字形：
+Serif	        Times New Roman Georgia	     Serif字体中字符在行的末端拥有额外的装饰
+Sans-serif	Arial Verdana	            "Sans"是指无 - 这些字体在末端没有额外的装饰
+Monospace	Courier New		     Lucida Console	所有的等宽字符具有相同的宽度
+用法：
+标签 {font-family:"Times New Roman",Times,serif;}
+标签 {font-family:Arial,Helvetica,sans-serif;}
+
+字体样式：
+正常 - 正常显示文本
+斜体 - 以斜体字显示的文字
+倾斜的文字 - 文字向一边倾斜
+标签 {font-style:normal;}
+标签 {font-style:italic;}
+标签 {font-style:oblique;}
+
+字体大小像素：
+标签 {font-size:40px;}
+
+em设置字体大小：
+h1 {font-size:2.5em;} /* 40px/16=2.5em */
+h2 {font-size:1.875em;} /* 30px/16=1.875em */
+p {font-size:0.875em;} /* 14px/16=0.875em */
+
+还有一种设定百分比的
+body {font-size:100%;}
+
+链接的样式：
+a:link - 正常，未访问过的链接
+a:visited - 用户已访问过的链接
+a:hover - 当用户鼠标放在链接上时
+a:active - 链接被点击的那一刻
+
+a:link {color:#000000;}      /* 未访问链接*/
+a:visited {color:#00FF00;}  /* 已访问链接 */
+a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+a:active {color:#0000FF;}  /* 鼠标点击时 */
+
+顺序规则：
+a:hover 必须跟在 a:link 和 a:visited后面
+a:active 必须跟在 a:hover后面
+
+删除链接下划线：text-decoration
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}
+背景颜色：
+a:link {background-color:#B2FF99;}
+a:visited {background-color:#FFFF85;}
+a:hover {background-color:#FF704D;}
+a:active {background-color:#FF704D;}
+
+列表该字体
+ul.a {list-style-type:circle;}
+ul.b {list-style-type:square;}
+ol.c {list-style-type:upper-roman;}
+ol.d {list-style-type:lower-alpha;}
+列表加图片
+ul
+{
+    list-style-image: url('sqpurple.gif');
+}
+
+
+
+Margin(外边距) - 清除边框外的区域，外边距是透明的。
+Border(边框) - 围绕在内边距和内容外的边框。
+Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+Content(内容) - 盒子的内容，显示文本和图像。
+
+
+边框样式
+border-style 值:
+none: 默认无边框
+dotted: 定义一个点线边框
+dashed: 定义一个虚线边框
+solid: 定义实线边框
+double: 定义两个边框。 两个边框的宽度和 border-width 的值相同
+groove: 定义3D沟槽边框。效果取决于边框的颜色值
+ridge: 定义3D脊边框。效果取决于边框的颜色值
+inset:定义一个3D的嵌入边框。效果取决于边框的颜色值
+outset: 定义一个3D突出边框。 效果取决于边框的颜色值
+
+
+
+上边框 border-top-style:dotted;
+右边框 border-right-style:solid;
+下边框 border-bottom-style:dotted;
+左边框 border-left-style:solid;
+
+
+CSS轮廓：outline
+
+
+CSS margin（外边距）
+margin-top:100px;
+margin-bottom:100px;
+margin-right:50px;
+margin-left:50px;
+值       说明
+auto	 设置浏览器边距。这样做的结果会依赖于浏览器
+length	 定义一个固定的margin（使用像素，pt，em等）
+%	 定义一个使用百分比的边距
+
+CSS padding（填充）
+padding:25px 50px;      顺时针方向（上右下左）
+
+所有CSS尺寸属性
+height	        设置元素的高度。
+line-height	设置行高。
+max-height	设置元素的最大高度。
+max-width	设置元素的最大宽度。
+min-height	设置元素的最小高度。
+min-width	设置元素的最小宽度。
+width	        设置元素的宽度。
+
+隐藏元素-display:none或visibility:hidden
+visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间
+display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。
+
+li{display: inline;} 将列表改为内联元素
+span{display:block;} 将span元素改为块元素
+
+CSS position（定位）
+static定位
+{position：static；}
+fixed定位       //可用于定位购物车
+{position：fixed；} 
+relative定位
+{position：relative；
+left：-20px；}
+{position：relative；
+left：20px；}
+{position：relative；
+top：-50px；}
+absolute定位      //绝对定位
+{position：absolute；
+left：100px；
+top：150px；}
+sticky定位      //粘性定位
+{position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;}
+z-index:-1; 这是让该行内容显示在后面（img里面加的）
+
+CSS布局 - overflow
+visible	默认值。内容不会被修剪，会呈现在元素框之外。
+hidden	内容会被修剪，并且其余内容是不可见的。
+scroll	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+auto	如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+inherit	规定应该从父元素继承 overflow 属性的值。
+
+CSS float（浮动）
+img{
+float：right；
+}
+
+清楚浮动-使用clear
+.text_line{
+clear：both；
+}
+
+CSS布局 - 水平 & 垂直对齐
+水平居中块级元素用margin：auto
+元素居中对齐
+{
+margin：auto；
+width：50%；
+border：3px solid green；
+padding：10px；
+}
+
+文本居中对齐
+text-align: center;
+
+图片居中对齐
+margin: auto;
+
+左右对齐 - 使用定位方式
+1、position: absolute; 
+2、float
+
+垂直居中 - 使用position 和 transform
+
+
+CSS 组合选择符
+后代选择器
+div p{
+ background-color：yellow；
+}
+子元素选择器
+div>p{
+ background-color：yellow；
+}
+相邻兄弟选择器
+div+p{
+ background-color：yellow；
+}
+后续兄弟选择器
+div~p
+{
+ background-color：yellow；
+}
+
+CSS 伪类(Pseudo-classes)
+anchor伪类
+a:link {color:#FF0000;} /* 未访问的链接 */
+a:visited {color:#00FF00;} /* 已访问的链接 */
+a:hover {color:#FF00FF;} /* 鼠标划过链接 */
+a:active {color:#0000FF;} /* 已选中的链接 */
+
+first-child伪类
+匹配第一个<p>元素
+p：first-child
+{
+ color：blue；
+}
+匹配所有<p>元素中的第一个<i>元素
+p > i：first-child
+{
+ color：blue；
+}
+匹配所有作为第一个子元素的<p>元素中的所有<i>元素
+p：first-child i
+{
+ color：blue；
+}
+
+lang伪类
+q：lang（no）{quotes："~" "~";}
+
+
+所有CSS伪类/元素
+选择器	                       示例	                     示例说明
+:checked	          input:checked	                选择所有选中的表单元素
+:disabled	          input:disabled	        选择所有禁用的表单元素
+:empty	                  p:empty	                选择所有没有子元素的p元素
+:enabled	          input:enabled	                选择所有启用的表单元素
+:first-of-type	          p:first-of-type	        选择的每个 p 元素是其父元素的第一个 p 元素
+:in-range	          input:in-range	        选择元素指定范围内的值
+:invalid	          input:invalid	                选择所有无效的元素
+:last-child	          p:last-child	                选择所有p元素的最后一个子元素
+:last-of-type	          p:last-of-type	        选择每个p元素是其母元素的最后一个p元素
+:not(selector)	          :not(p)	                选择所有p以外的元素
+:nth-child(n)	          p:nth-child(2)	        选择所有 p 元素的父元素的第二个子元素
+:nth-last-child(n)	  p:nth-last-child(2)	        选择所有p元素倒数的第二个子元素
+:nth-last-of-type(n)	  p:nth-last-of-type(2)	        选择所有p元素倒数的第二个为p的子元素
+:nth-of-type(n)	          p:nth-of-type(2)	        选择所有p元素第二个为p的子元素
+:only-of-type	          p:only-of-type	        选择所有仅有一个子元素为p的元素
+:only-child	          p:only-child	                选择所有仅有一个子元素的p元素
+:optional	          input:optional	        选择没有"required"的元素属性
+:out-of-range	          input:out-of-range	        选择指定范围以外的值的元素属性
+:read-only	          input:read-only	        选择只读属性的元素属性
+:read-write	          input:read-write	        选择没有只读属性的元素属性
+:required	          input:required	        选择有"required"属性指定的元素属性
+:root	                  root	                        选择文档的根元素
+:target	                  #news:target	                选择当前活动#news元素(点击URL包含锚的名字)
+:valid	                  input:valid	                选择所有有效值的属性
+:link	                  a:link	                选择所有未访问链接
+:visited	          a:visited	                选择所有访问过的链接
+:active	                  a:active	                选择正在活动链接
+:hover	                  a:hover	                把鼠标放在链接上的状态
+:focus	                  input:focus	                选择元素输入后具有焦点
+:first-letter	          p:first-letter	        选择每个<p> 元素的第一个字母
+:first-line	          p:first-line	                选择每个<p> 元素的第一行
+:first-child	          p:first-child	                选择器匹配属于任意元素的第一个子元素的 <p> 元素
+:before	                  p:before	                在每个<p>元素之前插入内容
+:after	                  p:after	                在每个<p>元素之后插入内容
+:lang(language)	          p:lang(it)	                为<p>元素的lang属性选择一个开始值
+
+CSS伪元素
+first-line伪元素    （"first-line" 伪元素用于向文本的首行设置特殊样式）
+p:first-line 
+{
+    color:#ff0000;
+    font-variant:small-caps;
+}
+
+first-letter伪元素  （"first-letter" 伪元素用于向文本的首字母设置特殊样式）
+p:first-letter 
+{
+    color:#ff0000;
+    font-size:xx-large;
+}
+
+before伪元素      （":before" 伪元素可以在元素的内容前面插入新内容。）
+h1:before
+{
+    content:url(smiley.gif);
+}
+
+
+after伪元素        （":after" 伪元素可以在元素的内容之后插入新内容。）
+h1:after
+{
+    content:url(smiley.gif);
+}
+
+所有CSS伪类/元素
+选择器	               示例	              示例说明
+:link	              a:link	          选择所有未访问链接
+:visited	      a:visited	          选择所有访问过的链接
+:active	              a:active	          选择正在活动链接
+:hover	              a:hover	          把鼠标放在链接上的状态
+:focus	              input:focus	  选择元素输入后具有焦点
+:first-letter	      p:first-letter	  选择每个<p> 元素的第一个字母
+:first-line	      p:first-line	  选择每个<p> 元素的第一行
+:first-child	      p:first-child	  选择器匹配属于任意元素的第一个子元素的 <p> 元素
+:before	              p:before	          在每个<p>元素之前插入内容
+:after	              p:after	          在每个<p>元素之后插入内容
+:lang(language)	      p:lang(it)	  为<p>元素的lang属性选择一个开始值
+
+CSS导航栏
+导航栏=链接列表
+<ul>
+<li><a href="#home">主页</a></li>
+<li><a href="#news">新闻</a></li>
+<li><a href="#contact">联系</a></li>
+<li><a href="#about">关于</a></li>
+</ul>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+ 
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+/* 鼠标移动到选项上修改背景颜色 */
+li a:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
